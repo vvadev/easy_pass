@@ -76,9 +76,9 @@
    ```
 
 5. Запустите проект, выполнив команду:
-  ```shell  
+   ```shell  
    flutter run
-  ```
+   ```
 
 <p align="right">(<a href="#readme-top">Вернуться наверх</a>)</p>
 
