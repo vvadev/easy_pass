@@ -110,7 +110,7 @@
 
 <p align="right">(<a href="#readme-top">Вернуться наверх</a>)</p>
 
-[Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
 [Flutter-url]: https://flutter.dev/
-[Dart]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Dart]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
 [Dart-url]: https://dart.dev/
