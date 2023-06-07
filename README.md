@@ -38,7 +38,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Easy Pass Screen Shot][easy-pass-screenshot]](http://demo.vvadev.ru/images/lerua_01.jpg)
+
+<img src="http://demo.vvadev.ru/images/lerua_01.jpg" alt="Easy Pass Screen Shot">
 
 Данное приложение было разработано по просьбе моего знакомого из магазина Леруа Мерлен. Оно предназначено для записи проезжающих на разгрузку автомобилей.
 
