@@ -23,12 +23,12 @@ class App extends StatelessWidget {
         init: AppController(),
         builder: (controller) {
           return Scaffold(
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                formController.validateForm();
-              },
-              child: const Icon(Icons.save),
-            ),
+            // floatingActionButton: FloatingActionButton(
+            //   onPressed: () {
+            //     formController.validateForm();
+            //   },
+            //   child: const Icon(Icons.save),
+            // ),
             appBar: AppBar(
               actions: [
                 IconButton(
@@ -102,6 +102,15 @@ class App extends StatelessWidget {
                     Text('Введите данные',
                         style: GoogleFonts.getFont('Montserrat', fontSize: 24)),
                     const FormWidget(),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () {
+                        formController.validateForm();
+                      },
+                      child: const Text(
+                        'Печатать',
+                      ),
+                    ),
                   ],
                 ),
               ),

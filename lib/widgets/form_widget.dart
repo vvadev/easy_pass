@@ -146,38 +146,82 @@ class FormWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
-              children: [
-                Text(
-                  'Время: ${controller.appointedTime}',
-                  style: GoogleFonts.getFont('Montserrat', fontSize: 18),
-                ),
-                const Spacer(),
-                ElevatedButton(
-                  onPressed: () {
-                    FocusManager.instance.primaryFocus?.unfocus();
-                    controller.selectTime(context);
-                  },
-                  child: const Icon(Icons.edit),
+            // Row(
+            //   children: [
+            //     Text(
+            //       'Время: ${controller.appointedTime}',
+            //       style: GoogleFonts.getFont('Montserrat', fontSize: 18),
+            //     ),
+            //     const Spacer(),
+            //     ElevatedButton(
+            //       onPressed: () {
+            //         FocusManager.instance.primaryFocus?.unfocus();
+            //         controller.selectTime(context);
+            //       },
+            //       child: const Icon(Icons.edit),
+            //     ),
+            //   ],
+            // ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Время',
+                labelStyle: GoogleFonts.getFont('Montserrat'),
+              ),
+              style: GoogleFonts.getFont('Montserrat'),
+              controller: controller.appointedTimeController,
+              keyboardType: TextInputType.number,
+              inputFormatters: [
+                MaskedInputFormatter(
+                  '##:##',
+                  allowedCharMatcher: RegExp(r'[0-9]'),
                 ),
               ],
+              onChanged: (value) {
+                try {
+                  controller.changeAppointedTime(value);
+                } catch (e) {
+                  controller.changeAppointedTime('Не выбрано');
+                }
+              },
             ),
             const SizedBox(height: 10),
-            Row(
-              children: [
-                Text(
-                  'Дата: ${controller.date}',
-                  style: GoogleFonts.getFont('Montserrat', fontSize: 18),
-                ),
-                const Spacer(),
-                ElevatedButton(
-                  onPressed: () {
-                    FocusManager.instance.primaryFocus?.unfocus();
-                    controller.selectDate(context);
-                  },
-                  child: const Icon(Icons.edit),
+            // Row(
+            //   children: [
+            //     Text(
+            //       'Дата: ${controller.date}',
+            //       style: GoogleFonts.getFont('Montserrat', fontSize: 18),
+            //     ),
+            //     const Spacer(),
+            //     ElevatedButton(
+            //       onPressed: () {
+            //         FocusManager.instance.primaryFocus?.unfocus();
+            //         controller.selectDate(context);
+            //       },
+            //       child: const Icon(Icons.edit),
+            //     ),
+            //   ],
+            // ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Дата',
+                labelStyle: GoogleFonts.getFont('Montserrat'),
+              ),
+              style: GoogleFonts.getFont('Montserrat'),
+              controller: controller.dateController,
+              keyboardType: TextInputType.number,
+              inputFormatters: [
+                MaskedInputFormatter(
+                  '##.##.####',
+                  allowedCharMatcher: RegExp(r'[0-9]'),
                 ),
               ],
+              onChanged: (value) {
+                try {
+                  controller.changeDate(value);
+                } catch (e) {
+                  controller.changeDate('Не выбрано');
+                }
+              },
             ),
           ],
         );

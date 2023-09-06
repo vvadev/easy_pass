@@ -18,7 +18,9 @@ class FormController extends GetxController {
   int numPallets = 0;
   String unloadintType = 'боковая';
   String appointedTime = 'не выбрано';
+  TextEditingController appointedTimeController = TextEditingController();
   String date = 'не выбрано';
+  TextEditingController dateController = TextEditingController();
 
   void generatePDF() async {
     PDFController pdfController = Get.put(PDFController());
@@ -184,6 +186,8 @@ class FormController extends GetxController {
     surnameController.clear();
     carNumberController.clear();
     numPalletsController.clear();
+    dateController.clear();
+    appointedTimeController.clear();
     update();
   }
 }
