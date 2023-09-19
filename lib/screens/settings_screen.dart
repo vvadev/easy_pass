@@ -181,6 +181,8 @@ class SettingsScreen extends StatelessWidget {
                               ),
                               Container(
                                 height: 500,
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
                                 child: PdfPreview(
                                   useActions: false,
                                   initialPageFormat: controller.pageFormat,
